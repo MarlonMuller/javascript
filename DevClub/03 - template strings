@@ -1,0 +1,11 @@
+/* 
+
+É possível colocar variáveis dentro das crases.
+
+*/
+
+const myAge = 27;
+
+const myString = `Minha idade é ${myAge} anos`;
+
+console.log(myString)
