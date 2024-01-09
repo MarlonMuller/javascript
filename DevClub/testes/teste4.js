@@ -23,3 +23,4 @@ for (let i = 0; i < cart.length; i++) {
 }
 
 console.log(somarArrey (cart))
+
