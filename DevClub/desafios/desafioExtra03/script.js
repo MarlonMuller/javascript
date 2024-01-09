@@ -9,16 +9,18 @@ const contacts = [
     { name: 'Maria', number: '(15) 91212-3434' },
 ]
 
-function procurar(){
+function procurar() {
+    let i = 0;
 
-    for(let i = 0; i < contacts.length; i++){
-        if(input.value.toLowerCase() == contacts[i].name.toLowerCase()){
+    do {
+        if (input.value.toLowerCase() == contacts[i].name.toLowerCase()) {
             result.innerHTML = `O contato de ${contacts[i].name} é ${contacts[i].number}`
             break
-        }else {
+        } else {
             result.innerHTML = `Contrato não encontrado`
         }
-    }
+        i++
+    } while (i < contacts.length)
 }
 
 btProcurar.addEventListener('click', procurar)
