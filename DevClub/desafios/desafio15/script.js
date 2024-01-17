@@ -2,7 +2,14 @@
 
 const myArrey = [1,2,3,4,5,6,7,8,9,10]
 
-myArrey.forEach(element, index => {
-    element += element[index]
-    console.log(element)
-});
+let soma = 0
+
+const somaTotal = () => {
+for (let i = 0; i < myArrey.length; i++) {
+    soma += myArrey[i]
+    console.log(`${soma}`)
+}
+console.log(`A soma final é ${soma}`)
+}
+
+somaTotal()
