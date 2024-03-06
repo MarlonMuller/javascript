@@ -6,9 +6,8 @@ const cart = [
     { productName: 'Morango', pricePerKg: 11.9, kg: 3 },
 ]
 
-const sumCart = cart.reduce((acc, value) => {
-    const result = value.pricePerKg * value.kg
-    return acc + result
+const sumCart = cart.reduce((prev, curr) => {
+    return prev + curr.pricePerKg * curr.kg;
 },0)
 
 console.log(`A sua compra ficou no total de ${sumCart}`)
