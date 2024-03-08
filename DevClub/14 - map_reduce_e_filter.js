@@ -9,9 +9,33 @@ const companies = [
 
 // Adicionar 10% de valor de mercado a todas as companhias - MAP
 
-const companiesUpdateValue = companies.map(companie => {
-    return companie.marketValue * 0.10 + companie.marketValue
+const companiesUpdateValue = companies.map(company => {
+    const newCompany = {
+        name: company.name,
+        marketValue: company.marketValue * 0.10 + company.marketValue,
+        CEO: company.CEO,
+        fundedOn: company.fundedOn
+    }
+    return newCompany
 })
-console.log(companiesUpdateValue)
+//console.log(companiesUpdateValue)
+
 // Filtrar somente companhias fundadas abaixo de 1990 - FILTER
+
+const selecionadas = companiesUpdateValue.filter(company => {
+    if(company.fundedOn < 1990){
+        return true
+    }else{
+        return false
+    }
+})
+//console.log(selecionadas)
+
 // Somar o valor de mercado das restantes - REDUCE
+
+const soma = selecionadas.reduce((prev, curr) => {
+    const result = curr.marketValue
+    return prev + result
+},0)
+
+console.log(soma)
