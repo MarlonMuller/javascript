@@ -1,3 +1,4 @@
 1 - 'https://viacep.com.br/ws/94190070/json/'
+`https://viacep.com.br/ws/${value}/json/`
 2 - `https://restcountries.com/v3.1/name/${pais}`
 3 - `https://rickandmortyapi.com/api/character/2` (https://rickandmortyapi.com)
